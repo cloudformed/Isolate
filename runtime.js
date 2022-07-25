@@ -1,5 +1,7 @@
 import isolate from './isolate'
 
+recentInteractions = {}
+
 export default {
   fetch: async (req, env, ctx) => {
     
@@ -17,3 +19,10 @@ export default {
     
   }
 }
+
+// const rate = {
+//   limit: 60,
+//   remaining: 60 - recentInteractions[ip],
+//   reset: 1658740147,
+//   used: 2,
+// }
